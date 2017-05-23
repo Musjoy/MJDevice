@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MJDevice_Tests' do
+  pod 'MJDevice', :path => '../'
+  
+  
+end
