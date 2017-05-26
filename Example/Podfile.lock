@@ -1,0 +1,19 @@
+PODS:
+  - MJDevice (0.1.0):
+    - ModuleCapability
+  - ModuleCapability (0.1.2)
+
+DEPENDENCIES:
+  - MJDevice (from `../`)
+
+EXTERNAL SOURCES:
+  MJDevice:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MJDevice: c227d485fde5dbe5212db9f12bb4ee73bae2f28b
+  ModuleCapability: 35cea7154ff855362682e90ecf1be529a533c931
+
+PODFILE CHECKSUM: 5fe32f3c691c77b45781e925f452387f895031c2
+
+COCOAPODS: 1.2.1
