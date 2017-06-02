@@ -12,6 +12,11 @@
 #define FILE_NAME_DEVICE_MAP @"device_map"
 #endif
 
+#ifndef kDefaultDeviceUUID
+#define kDefaultDeviceUUID  @"DefaultDeviceUUID"
+#endif
+
+
 @interface MJDevice : NSObject
 
 /// 获取设备唯一标识

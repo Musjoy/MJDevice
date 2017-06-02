@@ -10,11 +10,10 @@
 #import <UIKit/UIKit.h>
 #include <sys/sysctl.h>
 #import HEADER_FILE_SOURCE
+#import HEADER_KEYCHAIN
 
-#define kDefaultDeviceUUID  @"DefaultDeviceUUID"
 
 static NSString *s_curDeviceUUID = nil;
-
 
 @implementation MJDevice
 
@@ -48,13 +47,19 @@ static NSString *s_curDeviceUUID = nil;
 
 + (NSString *)deviceUUIDFromeKeychain
 {
-#ifdef MODULE_KEYCHAIN_WRAPPER
-    // 后续开发
-    return nil;
-#else
-    return nil;
-#endif
+    NSString *deviceUUID = keychainDefaultSharedObjectForKey(kDefaultDeviceUUID);
+    if (deviceUUID.length > 0) {
+        LogTrace(@"Keychain Device UUID : %@", deviceUUID);
+    } else {
+        NSUUID *uuid = [UIDevice currentDevice].identifierForVendor;
+        deviceUUID = [uuid UUIDString];
+        deviceUUID = @"D79BA8A5-4F45-4B98-B5A1-A5AFC6A76576";
+        LogTrace(@"New Device UUID: %@", deviceUUID);
+        keychainSetDefaultSharedObject(deviceUUID, kDefaultDeviceUUID);
+    }
+    return deviceUUID;
 }
+
 
 #pragma mark - DeviceVersion
 
@@ -67,7 +72,7 @@ static NSString *s_curDeviceUUID = nil;
     NSString *platform = [NSString stringWithCString:machine encoding:NSASCIIStringEncoding];
     free(machine);
     return platform;
-    }
+}
 
 + (NSString *)deviceVersionName
 {
