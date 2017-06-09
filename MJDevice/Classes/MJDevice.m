@@ -53,7 +53,6 @@ static NSString *s_curDeviceUUID = nil;
     } else {
         NSUUID *uuid = [UIDevice currentDevice].identifierForVendor;
         deviceUUID = [uuid UUIDString];
-        deviceUUID = @"D79BA8A5-4F45-4B98-B5A1-A5AFC6A76576";
         LogTrace(@"New Device UUID: %@", deviceUUID);
         keychainSetDefaultSharedObject(deviceUUID, kDefaultDeviceUUID);
     }
