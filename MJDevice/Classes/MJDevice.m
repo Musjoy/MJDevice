@@ -101,6 +101,13 @@ static NSString *s_curDeviceUUID = nil;
                                  @"iPhone9,2"   : @"iPhone 7 Plus",
                                  @"iPhone9,3"   : @"iPhone 7",
                                  @"iPhone9,4"   : @"iPhone 7 Plus",
+                                 
+                                 @"iPhone10,1"   : @"iPhone 8",
+                                 @"iPhone10,2"   : @"iPhone 8 Plus",
+                                 @"iPhone10,3"   : @"iPhone X",
+                                 @"iPhone10,4"   : @"iPhone 8",
+                                 @"iPhone10,5"   : @"iPhone 8 Plus",
+                                 @"iPhone10,6"   : @"iPhone X",
                                 
                                  @"iPod1,1"     : @"iPod Touch 1G",
                                  @"iPod2,1"     : @"iPod Touch 2G",
@@ -139,6 +146,9 @@ static NSString *s_curDeviceUUID = nil;
                                  @"iPad6,4"     : @"iPad Pro 9.7-inch (WiFi/Cellular)",
                                  @"iPad6,7"     : @"iPad Pro 12.9-inch (WiFi)",
                                  @"iPad6,8"     : @"iPad Pro 12.9-inch (WiFi/Cellular)",
+                                 
+                                 @"iPad6,11"     : @"iPad 5 (WiFi)",
+                                 @"iPad6,12"     : @"iPad 5 (WiFi/Cellular)",
 #endif
 #if TARGET_OS_TV
                                  @"AppleTV5,3"  : @"Apple TV 4G",
