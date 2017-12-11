@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MJDevice'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'MJDevice is use to get device info.'
 
   s.homepage         = 'https://github.com/Musjoy/MJDevice'
