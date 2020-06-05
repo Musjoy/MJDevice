@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MJDevice'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'MJDevice is use to get device info.'
 
   s.homepage         = 'https://github.com/Musjoy/MJDevice'
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
     'GCC_PREPROCESSOR_DEFINITIONS' => 'MODULE_DEVICE'
   }
   s.dependency 'ModuleCapability'
-  s.prefix_header_contents = '#import <ModuleCapability.h>'
+  s.prefix_header_contents = '#import "ModuleCapability.h"'
 
 end
